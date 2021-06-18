@@ -1,0 +1,9 @@
+extends base.pug
+
+block content 
+    h4 Upadte Video
+    form(method="post")
+        input(name="title",placeholder="Video Title",value=video.title, required)
+        input(name="description",placeholder="Description", required, type="text",minlength=20, vlaue=video.description)
+        input(name="hashtags",placeholder="Hashtags, seperated by comma.", required, type="text", value=video.hashtags.join()) 
+        input(placeholder="Save",type="submit")
